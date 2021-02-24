@@ -33,7 +33,8 @@ Might I suggest a new show?
 Would you like to see details about any of the shows on this list?
 Please enter the number of the show you would like to know more about
 If you would like to exit the program, please type Exit or End
------------------------------------------------------------------------ ```
+----------------------------------------------------------------------- 
+```
 
 From here you are able to choose the following options:
 - any integer 1-20 # returns specific show details
