@@ -5,24 +5,14 @@ class ShowFinder::API
     
 
     def initialize 
-        @url = "http://api.tvmaze.com/shows?page=#{rand(1...100)}"
+        @url = "http://api.tvmaze.com/shows?page=214"
     end
 
-    def get_show_data
+    def get_show_data_create_objects
+        puts "------------DATA HAS BEEN GRABBED SUCCESSFULLY------------"
         show_array = HTTParty.get(@url)
-        show_array = show_array.to_a
-        self.create_show_objects(show_array)
-    end
-
-    def create_show_objects(show_array)
-        show_array.each do |show_hash|
+        show_array[1...21].each do |show_hash|
             ShowFinder::Show.new(show_hash)
         end
-        binding.pry
     end
-    
-
-
-
-
 end

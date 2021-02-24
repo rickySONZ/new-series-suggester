@@ -1,5 +1,6 @@
-require'pry'
+require 'pry'
 require 'httparty'
+require 'require_all'
 
 require_relative '../lib/modules/showfinder.rb'
 require_relative '../lib/cli'

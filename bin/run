@@ -2,4 +2,4 @@
 
 require_relative '../config/environment.rb'
 
-ShowFinder::API.new.get_show_data
+ShowFinder::CLI.new.run
