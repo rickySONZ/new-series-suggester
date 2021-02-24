@@ -38,7 +38,7 @@ class ShowFinder::Show
         puts "Status: #{self.status}"
         puts "Run Time: #{self.run_time} minutes"
         puts "Official Website: #{self.official_site}"
-        puts "Summary: #{self.summary.gsub("<p>", "").gsub("</p>", "").gsub("<b>", "").gsub("</b>", "")}"
+        puts "Summary: #{self.summary.gsub("<p>", "").gsub("</p>", "").gsub("<b>", "").gsub("</b>", "").gsub("<i>", "").gsub("</i>", "")}" if self.summary != nil
     end
 
 end

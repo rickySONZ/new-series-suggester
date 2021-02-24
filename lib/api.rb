@@ -1,12 +1,11 @@
 require 'pry'
-require 'colorize'
 
 class ShowFinder::API 
 
     
 
     def initialize 
-        @url = "http://api.tvmaze.com/shows?page=214"
+        @url = "http://api.tvmaze.com/shows?page=#{rand(1...200)}"
     end
 
     def get_show_data_create_objects

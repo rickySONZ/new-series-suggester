@@ -8,3 +8,5 @@ gem "pry"
 gem "httparty"
 gem "require_all"
 gem 'colorize', '~> 0.8.1'
+gem 'tty-prompt', '~> 0.23.0'
+gem 'tty-prompt', '~> 0.23.0'
