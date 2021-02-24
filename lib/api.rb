@@ -1,4 +1,5 @@
 require 'pry'
+require 'colorize'
 
 class ShowFinder::API 
 
@@ -9,7 +10,7 @@ class ShowFinder::API
     end
 
     def get_show_data_create_objects
-        puts "------------DATA HAS BEEN GRABBED SUCCESSFULLY------------"
+        puts "------------DATA HAS BEEN GRABBED SUCCESSFULLY------------".colorize(:light_green)
         show_array = HTTParty.get(@url)
         show_array[1...21].each do |show_hash|
             ShowFinder::Show.new(show_hash)

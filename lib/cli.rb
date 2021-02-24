@@ -1,3 +1,5 @@
+require 'colorize'
+
 class ShowFinder::CLI 
 
 def run
@@ -21,9 +23,9 @@ def list_shows
     end
 
     puts "-----------------------------------------------------------------------"
-    puts "Would you like to see details about any of the shows on this list?"
-    puts "Please enter the number of the show you would like to know more about"
-    puts "If you would like to exit the program, please type Exit or End"
+    puts "Would you like to see details about any of the shows on this list?".colorize(:yellow)
+    puts "Please enter the number of the show you would like to know more about".colorize(:yellow)
+    puts "If you would like to exit the program, please type Exit or End".colorize(:yellow)
     puts "-----------------------------------------------------------------------"
     
 end
@@ -34,7 +36,7 @@ def check_input
     if input.to_i < 21 && input.to_i > 0
         @show_list[input.to_i - 1].display
         puts "-----------------------------------------------------------------------"
-        puts "If you would like to see another show, please put in the number (1-20)"
+        puts "If you would like to see another show, please put in the number (1-20)".colorize(:yellow)
         puts "-----------------------------------------------------------------------"
         check_input
     elsif input.downcase == "list"
@@ -45,7 +47,7 @@ def check_input
         puts "Goodbye!"
         puts "-----------------------------------------------------------------------"
     else
-        puts "I'm sorry but that is not a correct input"
+        puts "I'm sorry but that is not a correct input".colorize(:light_red)
         puts "-----------------------------------------------------------------------"
         check_input
     end
