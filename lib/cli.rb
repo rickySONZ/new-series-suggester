@@ -12,6 +12,7 @@ end
 
 
 def introduction
+    puts "--------------------------------------------------------------------"
     puts "Hello you look like you have some free time on your hands..."
     puts "Might I suggest a new show?"
 end
@@ -33,7 +34,7 @@ end
 def check_input
     input = gets.strip
     puts "-----------------------------------------------------------------------"
-    if input.to_i < 21 && input.to_i > 0
+    if input.to_i < 21 && input.to_i > 0 && input =~ /^\d+$/
         @show_list[input.to_i - 1].display
         puts "-----------------------------------------------------------------------"
         puts "If you would like to see another show, please put in the number (1-20)".colorize(:yellow)
