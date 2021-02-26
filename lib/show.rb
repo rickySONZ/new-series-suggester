@@ -2,10 +2,11 @@ class ShowFinder::Show
 
     @@all = []
 
+    ## Objects only given reader, not editing values
     attr_reader :name, :run_time, :genre, :summary, :language, :network, :official_site, :premiered, :status, :country
 
-    
-
+    ## Shows initialize by pulling from hash keys from API
+    ## Dig method used to access multiple levels of API easily
     def initialize(show_hash)
             @name = show_hash["name"]
             @genre = show_hash["genres"].join(" ")
@@ -20,25 +21,14 @@ class ShowFinder::Show
             save
     end
 
+    ##Method used to store instances of shows in @@all array
     def save
         @@all << self
     end 
 
+    ## Reader for @@all
     def self.all
         @@all
-    end
-
-    def display
-        puts "Name: #{self.name}"
-        puts "Genres: #{self.genre}"
-        puts "Language: #{self.language}" 
-        puts "Network: #{self.network}"
-        puts "Country: #{self.country}"
-        puts "Premiered On: #{self.premiered}"
-        puts "Status: #{self.status}"
-        puts "Run Time: #{self.run_time} minutes"
-        puts "Official Website: #{self.official_site}"
-        puts "Summary: #{self.summary.gsub("<p>", "").gsub("</p>", "").gsub("<b>", "").gsub("</b>", "").gsub("<i>", "").gsub("</i>", "")}" if self.summary != nil
     end
 
 end
