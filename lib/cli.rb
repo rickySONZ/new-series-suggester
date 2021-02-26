@@ -39,7 +39,7 @@ class ShowFinder::CLI
         newshow = ShowFinder::Show.all[input.to_i - 1]
         puts "Name: #{newshow.name}"
         puts "Genres: #{newshow.genre}"
-        puts "Language: #{newshow.language}" 
+        puts "Language: #{newshow.language}"
         puts "Network: #{newshow.network}"
         puts "Country: #{newshow.country}"
         puts "Premiered On: #{newshow.premiered}"

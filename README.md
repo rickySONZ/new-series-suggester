@@ -1,6 +1,9 @@
 # New Series Suggester
 
-Generates a list of a random show suggestions that can provide detailed information when selecting a show via list index.
+Generates a list of a random show suggestions that can provide detailed information when 
+selecting a show via list index. This CLI application pulls from the API source
+https://www.tvmaze.com/api and specifically from http://api.tvmaze.com/shows?page=1
+however the page # on the second web address is a random page from 1 - 200.
 
 # Usage
 To run, input 'bin/run' in terminal
@@ -37,9 +40,9 @@ If you would like to exit the program, please type Exit or End
 ```
 
 From here you are able to choose the following options:
-- any integer 1-20 # returns specific show details
+- any integer 1-20 # returns specific show details, will ask for further input after
 - "end" or "exit" # exits the program
-- "list" # return list of 20 shows 
+- "list" # return list of 20 shows, will ask for further input after
 - any other input # returns an error message and input will need to be reinput
 
 Program will continue to loop until ended via proper messages listed above.

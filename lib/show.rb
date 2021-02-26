@@ -30,5 +30,4 @@ class ShowFinder::Show
     def self.all
         @@all
     end
-
 end
