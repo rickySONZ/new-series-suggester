@@ -6,6 +6,8 @@ https://www.tvmaze.com/api and specifically from http://api.tvmaze.com/shows?pag
 however the page # on the second web address is a random page from 1 - 200.
 
 # Usage
+
+Video Link to Walkthrough: https://www.loom.com/share/165101cd211b4e95b90d252b162d6a4d
 To run, input 'bin/run' in terminal
 
 ```bin/run # returns below
