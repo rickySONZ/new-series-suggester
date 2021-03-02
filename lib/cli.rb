@@ -22,7 +22,7 @@ class ShowFinder::CLI
 ###This is where the CLI shows the random list of 15 TV Shows
     def list_shows
 
-        @show_list = ShowFinder::Show.all.each.with_index(1) do |show, index|
+        show_list = ShowFinder::Show.all.each.with_index(1) do |show, index|
             puts "#{index}. #{show.name}"
         end
 

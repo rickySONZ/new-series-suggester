@@ -13,7 +13,7 @@ class ShowFinder::Show
             @summary = show_hash["summary"]
             @run_time = show_hash["runtime"]
             @language = show_hash["language"]
-            @network = show_hash.dig("network", "name")
+            @network = show_hash.dig("network", "name")  #Using dig method here to account for nil checks
             @official_site = show_hash["officialSite"]
             @premiered = show_hash["premiered"]
             @status = show_hash["status"]
